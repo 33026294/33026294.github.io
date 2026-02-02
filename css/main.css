@@ -78,6 +78,44 @@
 #footer #footer-wrap div {
     margin: 15px;
 }
+#home-head {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* 容器保持定位，但不直接放背景图 */
+#home-head #home-background {
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+
+/* 新增：背景图层通用样式 */
+.bg-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity 2s ease-in-out; /* 渐变时长：2秒 */
+}
+
+.bg-current {
+    z-index: 1;
+    opacity: 1;
+}
+
+.bg-next {
+    z-index: 2;
+    opacity: 0; /* 预备层初始透明 */
+}
 #home-card {
     width: 300px;
 }

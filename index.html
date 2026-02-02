@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>Hexo</title>
-    <meta name="author" content="John Doe" />
+    <title>ShareBlog</title>
+    <meta name="author" content="雨归尘" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta
@@ -61,39 +61,39 @@
         <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
     <nav id="desktop-menu">
         <a class="title" href="/">
-            <span>HEXO</span>
+            <span>SHAREBLOG</span>
         </a>
         
         <a href="/">
             <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;Home</span>
+            <span>&ensp;主页</span>
         </a>
         
         <a href="/about">
             <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;About</span>
+            <span>&ensp;关于</span>
         </a>
         
         <a href="/archives">
             <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;Archives</span>
+            <span>&ensp;资源</span>
         </a>
         
         <a href="/categories">
             <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;Categories</span>
+            <span>&ensp;分享</span>
         </a>
         
         <a href="/tags">
             <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;Tags</span>
+            <span>&ensp;标签</span>
         </a>
         
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;HEXO</span>
+            <span>&emsp;SHAREBLOG</span>
         </div>
         <transition name="slide">
             <div class="items" v-show="showMenuItems">
@@ -103,7 +103,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-house fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
                     </div>
                 </a>
                 
@@ -112,7 +112,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-id-card fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
                     </div>
                 </a>
                 
@@ -121,7 +121,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-box-archive fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">资源</div>
                     </div>
                 </a>
                 
@@ -130,7 +130,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-bookmark fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">分享</div>
                     </div>
                 </a>
                 
@@ -139,7 +139,7 @@
                         <div style="min-width: 20px; max-width: 50px; width: 10%">
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </div>
-                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
                     </div>
                 </a>
                 
@@ -156,8 +156,11 @@
     <div
         id="home-background"
         ref="homeBackground"
-        data-images="/images/background.jpg"
-    ></div>
+        data-images="/images/background0.jpg,/images/background1.jpg,/images/background2.jpg"
+    >
+        <div class="back-layer bg-current"></div>
+        <div class="back-layer bg-next"></div>
+    </div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
         <span class="loop"></span>
@@ -165,7 +168,7 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1>Hexo</h1>
+                <h1>ShareBlog</h1>
                 <h3></h3>
                 <h5></h5>
             </div>
@@ -181,8 +184,8 @@
         
 
 <div class="post">
-    <a href="/2026/01/16/hello-world/">
-        <h2 class="post-title">Hello World</h2>
+    <a href="/2026/02/01/hello-world/">
+        <h2 class="post-title">你好，世界！</h2>
     </a>
     <div class="category-and-date">
         
@@ -190,7 +193,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2026/1/16
+            2026/2/1
         </span>
         
         
@@ -198,19 +201,19 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+            <p>欢迎使用<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>！这是您的第一篇帖子。请查看<a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a>了解更多信息。如果您在使用 Hexo 时遇到任何问题，可以在<a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">故障排除</a>页面找到答案，或者您也可以在<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>上向我提问。</p>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="创建新帖子"><a href="#创建新帖子" class="headerlink" title="创建新帖子"></a>创建新帖子</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;我的新帖子&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>详细信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">创建</a></p>
+<h3 id="运行服务器"><a href="#运行服务器" class="headerlink" title="运行服务器"></a>运行服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>详细信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">服务</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>详细信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">生成</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>详细信息: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">部署</a></p>
 
             
         </div>
@@ -220,7 +223,7 @@
         
         
     </div>
-    <a href="/2026/01/16/hello-world/" class="go-post">阅读全文</a>
+    <a href="/2026/02/01/hello-world/" class="go-post">阅读全文</a>
 </div>
 
 
@@ -241,9 +244,9 @@
         <div class="avatar">
             <img src="/images/avatar.jpg" alt="avatar" />
         </div>
-        <div class="name">John Doe</div>
+        <div class="name">雨归尘</div>
         <div class="description">
-            <p>Description<br>…</p>
+            <p>描述：<br>咸鱼一枚</p>
 
         </div>
         
@@ -251,7 +254,7 @@
         <div class="friend-links">
             
             <div class="friend-link">
-                <a target="_blank" rel="noopener" href="https://argvchs.github.io">Argvchs</a>
+                <a target="_blank" rel="noopener" href="https://galgameblog.com">North</a>
             </div>
             
         </div>
@@ -267,11 +270,11 @@
     <div id="footer-wrap">
         <div>
             &copy;
-            2022 - 2026 Hexo
+            2022 - 2026 ShareBlog
             <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
-            &commat;John Doe
+            &commat;雨归尘
         </div>
         <div>
             Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
@@ -292,5 +295,91 @@
     </div>
     <script src="/js/main.js"></script>
     
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<div id="music-container">
+  <meting-js
+    server="netease"
+    type="playlist"
+    id="7001312379" 
+    fixed="false"
+    mini="false"
+    list-folded="true"
+    autoplay="false">
+  </meting-js>
+</div>
+
+<style>
+  #music-container {
+    position: fixed;
+    top: 70px;
+    right: -70px;
+    width: 450px;
+    height: 90px; /* 初始高度保持与播放器主体一致 */
+    border-radius: 50px;
+    z-index: 1000000;
+    overflow: hidden; /* 这里保留 hidden，动画才会有收缩感 */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0.9;
+  }
+
+  /* 展开状态：高度必须足够大才能显示歌单 */
+  #music-container.show-list {
+    height: 340px; /* 歌单展开后的总高度 */
+  }
+
+  /* 确保 APlayer 列表本身不被隐藏 */
+  .aplayer .aplayer-list {
+    display: block !important; /* 强制显示列表 */
+    opacity: 1 !important;
+  }
+
+  .aplayer {
+    position: absolute;
+    width: 380px;
+    height: auto; 
+    border-radius: 50px 0 0 50px;
+    margin: 0 !important;
+  }
+
+  .aplayer-pic {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    animation: rotate-play 10s linear infinite;
+  }
+
+  @keyframes rotate-play {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .aplayer-info {
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: center;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('music-container');
+  let autoCloseTimer = null;
+
+  container.addEventListener('click', function(e) {
+    const menuBtn = e.target.closest('.aplayer-icon-menu');
+    if (menuBtn) {
+      container.classList.toggle('show-list');
+    }
+  });
+});
+</script>
 </body>
 </html>
